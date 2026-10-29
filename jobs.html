@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevTrack - Find Jobs</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body  class="font-sans bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold">D</div>
+          <span class="font-bold text-xl text-slate-900">DevTrack</span>
+        </a>
+        <!-- Desktop navigation -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="index.html"
+              class="text-slate-600 hover:text-emerald-600 transition-colors py-1">
+                Home
+            </a>
+
+            <a href="jobs.html"
+              class="text-emerald-600 font-semibold border-b-2 border-emerald-600 py-1">
+                Find Jobs
+            </a>
+
+            <a href="dashboard.html"
+              class="text-slate-600 hover:text-emerald-600 transition-colors py-1">
+                Dashboard
+            </a>
+
+            <a href="tracker.html"
+              class="text-slate-600 hover:text-emerald-600 transition-colors py-1">
+                My Tracker
+            </a>
+        </nav>
+
+        <!-- Mobile navigation -->
+        <details class="relative md:hidden">
+            <summary class="cursor-pointer list-none rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700">
+                ☰
+            </summary>
+
+            <nav class="absolute right-0 top-full mt-2 w-48 rounded-2xl border border-slate-200 bg-white p-3 shadow-lg z-50 flex flex-col gap-3 text-sm">
+                <a href="index.html" class="text-slate-600 hover:text-emerald-600">
+                    Home
+                </a>
+                <a href="jobs.html" class="text-slate-600 hover:text-emerald-600">
+                    Find Jobs
+                </a>
+                <a href="dashboard.html" class="text-slate-600 hover:text-emerald-600">
+                    Dashboard
+                </a>
+                <a href="tracker.html" class="text-slate-600 hover:text-emerald-600">
+                    My Tracker
+                </a>
+            </nav>
+        </details>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="saved-jobs.html" class="text-slate-500 hover:text-slate-700 p-2 rounded-full hover:bg-slate-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
+        </a>
+        <a href="index.html" class="text-xs font-semibold text-slate-600 hover:text-emerald-600 transition-colors">Sign Out</a>
+        <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-full hover:bg-slate-100 transition-colors">
+          <div class="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center text-xs font-bold">AM</div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+    
+    <div>
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Curated for you</span>
+      <h1 class="text-3xl font-bold text-slate-900 mt-1">Find Developer Jobs</h1>
+    </div>
+
+    <div class="bg-white p-2 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-2">
+      <div class="flex-1 flex items-center gap-2 px-3">
+        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <input type="search" placeholder="Search role, skill, or company..." class="w-full text-sm outline-none bg-transparent py-2">
+      </div>
+      <button class="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-lg text-sm font-medium">
+        Search jobs
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-6 h-fit">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+          <h2 class="font-bold text-slate-900 text-sm">Filters</h2>
+          <button class="text-xs text-slate-400 hover:text-slate-600">Clear all</button>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="text-xs font-bold text-slate-700">Job type</h3>
+          <div class="space-y-1.5 text-xs text-slate-600">
+            <label class="flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" checked class="accent-emerald-600"> Full-time</span>
+              <span class="text-slate-400">42</span>
+            </label>
+            <label class="flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" class="accent-emerald-600"> Contract</span>
+              <span class="text-slate-400">18</span>
+            </label>
+            <label class="flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" class="accent-emerald-600"> Part-time</span>
+              <span class="text-slate-400">9</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="space-y-2 border-t border-slate-100 pt-4">
+          <h3 class="text-xs font-bold text-slate-700">Salary range</h3>
+          <div class="space-y-1.5 text-xs text-slate-600">
+            <label class="flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" checked class="accent-emerald-600"> $80k - $110k</span>
+              <span class="text-slate-400">42</span>
+            </label>
+            <label class="flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2"><input type="checkbox" class="accent-emerald-600"> $110k - $140k</span>
+              <span class="text-slate-400">18</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-3 space-y-4">       
+        <div class="flex items-center justify-between text-xs text-slate-500">
+          <span><b>128 jobs</b> matching your profile</span>
+          <select class="bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-700 hover:border-emerald-400 hover:bg-slate-50 focus:outline-none focus:border-emerald-500">
+            <option value="relevant">Most relevant</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">          
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-emerald-500 transition-all">
+            <div class="flex justify-between items-start">
+              <div class="w-10 h-10 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-bold text-sm">L</div>
+              <button class="text-slate-400 hover:text-rose-500">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </button>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400">Linear &bull; Remote</span>
+              <h3 class="font-bold text-slate-900 text-base">Frontend Developer</h3>
+              <p class="text-xs font-semibold text-slate-700 mt-1">$120k - $150k <span class="text-slate-400 font-normal">/ year</span></p>
+            </div>
+            <div class="flex items-center gap-2 text-[10px]">
+              <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">React</span>
+              <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">TypeScript</span>
+              <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">+2</span>
+            </div>
+            <div class="flex justify-between items-center border-t border-slate-100 pt-3 text-xs">
+              <span class="text-slate-400">Posted 2d ago</span>
+              <a href="job-details.html" class="text-emerald-600 font-semibold hover:underline">View Details &rarr;</a>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3 hover:border-emerald-500 transition-all">
+            <div class="flex justify-between items-start">
+              <div class="w-10 h-10 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-bold text-sm">V</div>
+              <button class="text-slate-400 hover:text-rose-500">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </button>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400">Vercel &bull; Remote</span>
+              <h3 class="font-bold text-slate-900 text-base">React Developer</h3>
+              <p class="text-xs font-semibold text-slate-700 mt-1">$115k - $145k <span class="text-slate-400 font-normal">/ year</span></p>
+            </div>
+            <div class="flex items-center gap-2 text-[10px]">
+              <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">React</span>
+              <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">Node</span>
+              <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded">+2</span>
+            </div>
+            <div class="flex justify-between items-center border-t border-slate-100 pt-3 text-xs">
+              <span class="text-slate-400">Posted 2d ago</span>
+              <a href="job-details.html" class="text-emerald-600 font-semibold hover:underline">View Details &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+    <p>&copy; 2026 DevTrack. All rights reserved.</p>
+  </footer>
+</body>
+</html>
